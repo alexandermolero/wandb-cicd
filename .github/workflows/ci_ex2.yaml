@@ -1,0 +1,16 @@
+name: Github Actions Demo
+
+on: [push]
+
+jobs:
+    my-first-job:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - name: intro
+              run: |
+                echo "second example using github actions"
+            - name: run python script
+              run: |
+                pip install -r requirements.txt
+                python ci_ex2.py
